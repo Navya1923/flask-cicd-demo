@@ -16,7 +16,7 @@ FAIL_MODE = os.getenv("FAIL_MODE", "false") == "true"
 @app.route("/")
 def home():
     log.info("Home page requested")
-    return jsonify(message="Hello from my CI/CD pipeline!", version="1.0")
+    return jsonify(message="Hello from my CI/CD pipeline!", version="2.0")
 
 
 @app.route("/health")

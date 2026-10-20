@@ -34,3 +34,19 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/flask-cicd-demo:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/flask-cicd-demo:${{ github.sha }}
+    deploy:
+    needs: build-and-push
+    runs-on: self-hosted
+    steps:
+      - name: Deploy container
+        run: |
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/flask-cicd-demo:latest
+          docker stop app || true
+          docker rm app || true
+          docker run -d --name app -p 8080:5000 --restart unless-stopped ${{ secrets.DOCKERHUB_USERNAME }}/flask-cicd-demo:latest
+          docker image prune -f
+
+      - name: Smoke test
+        run: |
+          sleep 5
+          curl --fail http://localhost:8080/health
