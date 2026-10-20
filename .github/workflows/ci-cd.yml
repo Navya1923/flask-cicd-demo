@@ -34,6 +34,7 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/flask-cicd-demo:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/flask-cicd-demo:${{ github.sha }}
+
   deploy:
     needs: build-and-push
     runs-on: self-hosted
