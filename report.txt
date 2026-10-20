@@ -1,0 +1,5 @@
+# Log Summary
+Levels: {'ERROR': 5}
+First error: 2026-10-20 17:19:39,962 | Last error: 2026-10-20 17:19:39,992
+Top errors:
+  5x  Dependency check failed: cache connection refused (host=cache:6379)
