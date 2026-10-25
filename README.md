@@ -124,7 +124,6 @@ The incident is fully simulated. No real production logs, systems, or data are u
 
 ![Green pipeline](docs/images/pipeline-green.png)
 
-
 **App running after automated deploy**
 
 ![App running](docs/images/app-running.png)
