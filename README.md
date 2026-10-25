@@ -124,9 +124,6 @@ The incident is fully simulated. No real production logs, systems, or data are u
 
 ![Green pipeline](docs/images/pipeline-green.png)
 
-**Self-hosted runner online**
-
-![Runner idle](docs/images/runner-idle.png)
 
 **App running after automated deploy**
 
@@ -136,9 +133,6 @@ The incident is fully simulated. No real production logs, systems, or data are u
 
 ![Docker Hub tags](docs/images/dockerhub-tags.png)
 
-## Demo video
-
-[Watch the walkthrough](ADD-YOUR-VIDEO-LINK-HERE)
 
 ## Project structure
 
